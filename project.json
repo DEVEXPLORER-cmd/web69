@@ -1,0 +1,73 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "website_type": {
+      "type": "string",
+      "enum": [
+        "business",
+        "portfolio",
+        "blog",
+        "ecommerce",
+        "landing",
+        "restaurant",
+        "agency",
+        "startup"
+      ],
+      "description": "Type of website"
+    },
+    "color_scheme": {
+      "type": "string",
+      "enum": [
+        "modern",
+        "vibrant",
+        "minimal",
+        "dark",
+        "warm",
+        "cool"
+      ],
+      "description": "Color scheme preference"
+    },
+    "ai_prompt": {
+      "type": "string",
+      "description": "Original AI generation prompt"
+    },
+    "html_content": {
+      "type": "string",
+      "description": "Generated HTML content"
+    },
+    "css_content": {
+      "type": "string",
+      "description": "Generated CSS styles"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "preview",
+        "published"
+      ],
+      "default": "draft",
+      "description": "Project status"
+    },
+    "template_id": {
+      "type": "string",
+      "description": "Template used (if any)"
+    },
+    "preview_url": {
+      "type": "string",
+      "description": "Preview URL"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
